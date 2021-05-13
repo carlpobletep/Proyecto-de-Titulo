@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device=width, initial/scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ingreso al sistema<title>
+</head>
+<body>
+    {%load crispy_forms_tags}
+    <main class="container">
+        <div class="container-body">
+
+        </div>
+
+        <main class="row">
+            <div class="col-12 col-md-6 offset-md-3">
+
+                <div class="card-body">
+                <h2>Ingresa tus credenciales</h2>
+                <hr>
+                <form method="post">
+
+                     {% csrf_token %}                   
+                     {{ form | crispy }}
+                    <a ref="{% url 'index'%}"> Ir al Inicio</a>
+                    <input type="submit" value="ingresar" class="btn btn-success float right">
+                </form>
+            </div>    
+        </div>
+
+    </main>
+
+
+
+</body>
+</html>
